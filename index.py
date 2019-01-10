@@ -73,7 +73,7 @@ class HChildHood(Bot):
         self.wait_answer()
         index_str = self.get_session_attribute('index', -1)
         if index_str == '-1' or int(index_str) + 1 >= len(self.pics):
-            index = random.random()*len(self.pics)
+            index = int(random.random()*len(self.pics))
         else:
             index = int(index_str) + 1
 
@@ -89,7 +89,7 @@ class HChildHood(Bot):
         self.wait_answer()
         index_str = self.get_session_attribute('index', -1)
         if index_str == '-1' or int(index_str) - 1 < 0:
-            index = random.random() * len(self.pics)
+            index = int(random.random() * len(self.pics))
         else:
             index = int(index_str) - 1
 
