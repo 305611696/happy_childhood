@@ -42,14 +42,14 @@ class HChildHood(Bot):
         """
         self.wait_answer()
         template = BodyTemplate1()
-        template.set_title('快乐童年')
-        template.set_plain_text_content('欢迎进入快乐童年，可以尝试对我说开始画图。')
+        template.set_title('简笔画')
+        template.set_plain_text_content('欢迎进入简笔画，可以尝试对我说开始画图。')
         template.set_background_image('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1532350870263&di=c93edb2fb9a3cfe7a632acc46cceba62&imgtype=0&src=http%3A%2F%2Ffile25.mafengwo.net%2FM00%2F0A%2FAC%2FwKgB4lMC26CAWsKoAALb5778DWg60.rbook_comment.w1024.jpeg')
         template.set_token('0c71de96-15d2-4e79-b97e-e52cec25c254')
         render_template = RenderTemplate(template)
         return {
             'directives': [render_template],
-            'outputSpeech': r'欢迎进入快乐童年，可以尝试对我说开始画图。'
+            'outputSpeech': r'欢迎进入简笔画，可以尝试对我说开始画图。'
         }
 
     def ended_request(self):
@@ -111,7 +111,7 @@ class HChildHood(Bot):
 
     def get_template(self, content, bg='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1532350870263&di=c93edb2fb9a3cfe7a632acc46cceba62&imgtype=0&src=http%3A%2F%2Ffile25.mafengwo.net%2FM00%2F0A%2FAC%2FwKgB4lMC26CAWsKoAALb5778DWg60.rbook_comment.w1024.jpeg'):
         template = BodyTemplate1()
-        template.set_title('快乐童年')
+        template.set_title('简笔画')
         template.set_plain_text_content(content)
         template.set_background_image(bg)
         template.set_token(content)
