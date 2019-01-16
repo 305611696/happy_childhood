@@ -34,6 +34,7 @@ class HChildHood(Bot):
         self.add_intent_handler('next', self.get_next)
         self.add_intent_handler('previous', self.get_previous)
         self.add_intent_handler('ai.dueros.common.default_intent', self.get_default)
+        self.add_session_ended_handler(self.ended_request)
 
     def launch_request(self):
         """
@@ -50,6 +51,14 @@ class HChildHood(Bot):
             'directives': [render_template],
             'outputSpeech': r'欢迎进入快乐童年，可以尝试对我说开始画图。'
         }
+
+    def ended_request(self):
+            """
+            关闭技能
+            """
+            return {
+                'outputSpeech': r'感谢您的使用'
+            }
 
     def get_default(self):
         self.wait_answer()
